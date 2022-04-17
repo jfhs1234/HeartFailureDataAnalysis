@@ -45,6 +45,9 @@ for neighbors in range(1, 10):
 
 #  plot accuracy vs neighbors
 plt.plot(list(range(1, 10)), accuracy_list)
+plt.title('Plot of accuracy vs neighbours number (K-nn)')
+plt.xlabel("Number of neighbours", fontsize=10)
+plt.ylabel("% Accuracy", fontsize=10)
 plt.show()
 
 # knn with best neighbor number
@@ -65,6 +68,9 @@ for c in SVC_range:
     accuracy_list.append(accuracy_score(y_test, y_prediction))
 
 plt.plot(SVC_range, accuracy_list)
+plt.title('Plot of accuracy vs regularization parameter (SVC)')
+plt.xlabel("Regularization parameter", fontsize=10)
+plt.ylabel("% Accuracy", fontsize=10)
 plt.show()
 
 # SVC with best c
@@ -104,4 +110,3 @@ plt.xlabel("Model", fontsize=10)
 plt.ylabel("% Accuracy", fontsize=10)
 plt.title('Bar plot of model accuracy')
 plt.show()
-
